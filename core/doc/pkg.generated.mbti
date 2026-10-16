@@ -1,0 +1,67 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "username/wordcraft/core/doc"
+
+import {
+  "username/wordcraft/core",
+}
+
+// Values
+pub fn make_noteref(@core.NoteKind, Int, String) -> InlineObject
+
+// Errors
+
+// Types and methods
+pub struct Document {
+  body : Array[Paragraph]
+  notes : Array[Note]
+}
+pub fn Document::add_empty_paragraph(Self) -> Int
+pub fn Document::add_note(Self, @core.NoteKind, String, String) -> Int
+pub fn Document::add_paragraph(Self, String) -> Int
+pub fn Document::find_note_text(Self, Int) -> String
+pub fn Document::get_paragraph(Self, Int) -> Paragraph
+pub fn Document::new() -> Self
+pub fn Document::note_at(Self, Int) -> Note
+pub fn Document::note_count(Self, @core.NoteKind) -> Int
+pub fn Document::note_mark(Self, Int, @core.NoteProps) -> String
+pub fn Document::notes_length(Self) -> Int
+pub fn Document::paragraph_count(Self) -> Int
+pub fn Document::push_object(Self, Int, InlineObject) -> Unit
+pub fn Document::push_text(Self, Int, String) -> Unit
+pub fn Document::set_note_custom(Self, Int, String) -> Unit
+
+pub enum Inline {
+  Text(String)
+  Object(InlineObject)
+}
+
+pub enum InlineObject {
+  NoteRef(kind~ : @core.NoteKind, id~ : Int, custom~ : String)
+}
+
+pub struct InlineView {
+  is_text : Bool
+  text : String
+  kind : @core.NoteKind
+  id : Int
+  custom : String
+}
+
+pub struct Note {
+  id : Int
+  kind : @core.NoteKind
+  text : String
+  mut custom : String
+}
+
+pub struct Paragraph {
+  inlines : Array[Inline]
+}
+pub fn Paragraph::inline_count(Self) -> Int
+pub fn Paragraph::inline_is_noteref(Self, Int) -> Bool
+pub fn Paragraph::inline_view(Self, Int) -> InlineView
+pub fn Paragraph::plain_text(Self) -> String
+
+// Type aliases
+
+// Traits

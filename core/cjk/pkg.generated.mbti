@@ -1,0 +1,67 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "username/wordcraft/core/cjk"
+
+// Values
+pub const CIRCLE_MAX : Int = 1000
+
+pub fn aiueo(Int) -> String
+
+pub fn aiueo_full_width(Int) -> String
+
+pub fn chinese_counting(Int) -> String
+
+pub fn chinese_counting_thousand(Int) -> String
+
+pub fn chinese_legal_simplified(Int) -> String
+
+pub fn chosung(Int) -> String
+
+pub fn circled(Int) -> String
+
+pub fn decimal_enclosed_fullstop(Int) -> String
+
+pub fn decimal_enclosed_paren(Int) -> String
+
+pub fn decimal_full_width(Int) -> String
+
+pub fn ganada(Int) -> String
+
+pub fn ideograph_digital(Int) -> String
+
+pub fn ideograph_enclosed_circle(Int) -> String
+
+pub fn ideograph_legal_traditional(Int) -> String
+
+pub fn ideograph_traditional(Int) -> String
+
+pub fn ideograph_zodiac(Int) -> String
+
+pub fn ideograph_zodiac_traditional(Int) -> String
+
+pub fn iroha(Int) -> String
+
+pub fn iroha_full_width(Int) -> String
+
+pub fn japanese_counting(Int) -> String
+
+pub fn japanese_digital_ten_thousand(Int) -> String
+
+pub fn japanese_legal(Int) -> String
+
+pub fn korean_counting(Int) -> String
+
+pub fn korean_digital(Int) -> String
+
+pub fn korean_legal(Int) -> String
+
+pub fn taiwanese_counting(Int) -> String
+
+pub fn taiwanese_counting_thousand(Int) -> String
+
+// Errors
+
+// Types and methods
+
+// Type aliases
+
+// Traits
