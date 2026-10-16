@@ -1,0 +1,84 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "username/wordcraft/core/layout"
+
+import {
+  "username/wordcraft/core",
+  "username/wordcraft/core/doc",
+}
+
+// Values
+pub const SUPERSCRIPT_DY_EM : Double = 0.33
+
+pub fn break_lines(Array[Token], Double) -> Array[Array[Token]]
+
+pub fn char_width_em(Char) -> Double
+
+pub fn default_page_spec() -> PageSpec
+
+pub fn font_for_char(Char) -> String
+
+pub fn layout_document(@doc.Document, PageSpec, @core.NoteProps) -> Array[PlacedPage]
+
+pub fn layout_note_mark(@doc.Document, Int, @core.NoteProps, Double, Double) -> PlacedRun
+
+pub fn make_page_spec(width_em~ : Double, height_em~ : Double, margin_left_em~ : Double, margin_right_em~ : Double, margin_top_em~ : Double, margin_bottom_em~ : Double, line_height_em~ : Double, footnote_area_em~ : Double) -> PageSpec
+
+pub fn measure_text(String) -> Double
+
+pub fn suggest_mark_scale(String, Double) -> Double
+
+pub fn tokenize(String) -> Array[Token]
+
+// Errors
+
+// Types and methods
+pub struct PageSpec {
+  width_em : Double
+  height_em : Double
+  margin_left_em : Double
+  margin_right_em : Double
+  margin_top_em : Double
+  margin_bottom_em : Double
+  line_height_em : Double
+  footnote_area_em : Double
+}
+
+pub struct PlacedLine {
+  runs : Array[PlacedRun]
+  width : Double
+  y : Double
+}
+
+pub struct PlacedNote {
+  id : Int
+  mark : String
+  text : String
+}
+
+pub struct PlacedPage {
+  lines : Array[PlacedLine]
+  footnotes : Array[PlacedNote]
+  page_no : Int
+}
+
+pub struct PlacedRun {
+  text : String
+  x : Double
+  dy : Double
+  width : Double
+  scale : Double
+}
+
+pub struct Token {
+  text : String
+  width : Double
+  is_space : Bool
+  no_break_before : Bool
+  no_break_after : Bool
+  is_superscript : Bool
+  note_id : Int
+}
+
+// Type aliases
+
+// Traits

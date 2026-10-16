@@ -1,0 +1,5 @@
+import {
+  "username/wordcraft/core",
+  "username/wordcraft/core/doc",
+  "username/wordcraft/core/engine",
+}

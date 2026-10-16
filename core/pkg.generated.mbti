@@ -1,0 +1,174 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "username/wordcraft/core"
+
+// Values
+pub let all_num_formats : Array[NumFormat]
+
+pub fn cardinal_text(Int) -> String
+
+pub fn chicago(Int) -> String
+
+pub fn letters(Int) -> String
+
+pub fn make_note_props(num_fmt~ : NumFormat, num_start~ : Int) -> NoteProps
+
+pub fn note_kind_eq(NoteKind, NoteKind) -> Bool
+
+pub fn note_mark(Int, NoteProps) -> String
+
+pub fn ordinal_text(Int) -> String
+
+pub fn roman(Int) -> String
+
+pub fn russian_letters(Int) -> String
+
+pub fn russian_letters_upper(Int) -> String
+
+// Errors
+
+// Types and methods
+pub enum NoteKind {
+  Footnote
+  Endnote
+}
+pub fn NoteKind::endnote() -> Self
+pub fn NoteKind::footnote() -> Self
+
+pub struct NoteProps {
+  num_fmt : NumFormat
+  num_start : Int
+}
+pub fn NoteProps::format_mark(Self, Int) -> String
+
+pub enum NumFormat {
+  Decimal
+  UpperRoman
+  LowerRoman
+  UpperLetter
+  LowerLetter
+  Ordinal
+  CardinalText
+  OrdinalText
+  Hex
+  Chicago
+  IdeographDigital
+  JapaneseCounting
+  Aiueo
+  Iroha
+  DecimalFullWidth
+  DecimalHalfWidth
+  JapaneseLegal
+  JapaneseDigitalTenThousand
+  DecimalEnclosedCircle
+  DecimalFullWidth2
+  AiueoFullWidth
+  IrohaFullWidth
+  DecimalZero
+  Bullet
+  Ganada
+  Chosung
+  DecimalEnclosedFullstop
+  DecimalEnclosedParen
+  DecimalEnclosedCircleChinese
+  IdeographEnclosedCircle
+  IdeographTraditional
+  IdeographZodiac
+  IdeographZodiacTraditional
+  TaiwaneseCounting
+  IdeographLegalTraditional
+  TaiwaneseCountingThousand
+  TaiwaneseDigital
+  ChineseCounting
+  ChineseLegalSimplified
+  ChineseCountingThousand
+  KoreanDigital
+  KoreanCounting
+  KoreanLegal
+  KoreanDigital2
+  VietnameseCounting
+  RussianLower
+  RussianUpper
+  None
+  NumberInDash
+  Hebrew1
+  Hebrew2
+  ArabicAlpha
+  ArabicAbjad
+  HindiVowels
+  HindiConsonants
+  HindiNumbers
+  HindiCounting
+  ThaiLetters
+  ThaiNumbers
+  ThaiCounting
+  BahtText
+  DollarText
+}
+pub fn NumFormat::aiueo() -> Self
+pub fn NumFormat::aiueo_full_width() -> Self
+pub fn NumFormat::arabic_abjad() -> Self
+pub fn NumFormat::arabic_alpha() -> Self
+pub fn NumFormat::baht_text() -> Self
+pub fn NumFormat::bullet() -> Self
+pub fn NumFormat::cardinal_text() -> Self
+pub fn NumFormat::chicago() -> Self
+pub fn NumFormat::chinese_counting() -> Self
+pub fn NumFormat::chinese_counting_thousand() -> Self
+pub fn NumFormat::chinese_legal_simplified() -> Self
+pub fn NumFormat::chosung() -> Self
+pub fn NumFormat::decimal() -> Self
+pub fn NumFormat::decimal_enclosed_circle() -> Self
+pub fn NumFormat::decimal_enclosed_circle_chinese() -> Self
+pub fn NumFormat::decimal_enclosed_fullstop() -> Self
+pub fn NumFormat::decimal_enclosed_paren() -> Self
+pub fn NumFormat::decimal_full_width() -> Self
+pub fn NumFormat::decimal_full_width2() -> Self
+pub fn NumFormat::decimal_half_width() -> Self
+pub fn NumFormat::decimal_zero() -> Self
+pub fn NumFormat::dollar_text() -> Self
+pub fn NumFormat::format(Self, Int) -> String
+pub fn NumFormat::ganada() -> Self
+pub fn NumFormat::hebrew1() -> Self
+pub fn NumFormat::hebrew2() -> Self
+pub fn NumFormat::hex() -> Self
+pub fn NumFormat::hindi_consonants() -> Self
+pub fn NumFormat::hindi_counting() -> Self
+pub fn NumFormat::hindi_numbers() -> Self
+pub fn NumFormat::hindi_vowels() -> Self
+pub fn NumFormat::ideograph_digital() -> Self
+pub fn NumFormat::ideograph_enclosed_circle() -> Self
+pub fn NumFormat::ideograph_legal_traditional() -> Self
+pub fn NumFormat::ideograph_traditional() -> Self
+pub fn NumFormat::ideograph_zodiac() -> Self
+pub fn NumFormat::ideograph_zodiac_traditional() -> Self
+pub fn NumFormat::iroha() -> Self
+pub fn NumFormat::iroha_full_width() -> Self
+pub fn NumFormat::japanese_counting() -> Self
+pub fn NumFormat::japanese_digital_ten_thousand() -> Self
+pub fn NumFormat::japanese_legal() -> Self
+pub fn NumFormat::korean_counting() -> Self
+pub fn NumFormat::korean_digital() -> Self
+pub fn NumFormat::korean_digital2() -> Self
+pub fn NumFormat::korean_legal() -> Self
+pub fn NumFormat::lower_letter() -> Self
+pub fn NumFormat::lower_roman() -> Self
+pub fn NumFormat::none_() -> Self
+pub fn NumFormat::number_in_dash() -> Self
+pub fn NumFormat::ooxml(Self) -> String
+pub fn NumFormat::ordinal() -> Self
+pub fn NumFormat::ordinal_text() -> Self
+pub fn NumFormat::russian_lower() -> Self
+pub fn NumFormat::russian_upper() -> Self
+pub fn NumFormat::taiwanese_counting() -> Self
+pub fn NumFormat::taiwanese_counting_thousand() -> Self
+pub fn NumFormat::taiwanese_digital() -> Self
+pub fn NumFormat::thai_counting() -> Self
+pub fn NumFormat::thai_letters() -> Self
+pub fn NumFormat::thai_numbers() -> Self
+pub fn NumFormat::upper_letter() -> Self
+pub fn NumFormat::upper_roman() -> Self
+pub fn NumFormat::vietnamese_counting() -> Self
+
+// Type aliases
+
+// Traits
