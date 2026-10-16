@@ -1,0 +1,9 @@
+import {
+  "moonbitlang/core/hashmap",
+  "username/wordcraft/core",
+  "username/wordcraft/core/sheet",
+  "username/wordcraft/core/docx",
+  "username/wordcraft/core/zip",
+}
+
+pkgtype(kind: "library")

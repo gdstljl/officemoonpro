@@ -1,0 +1,31 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "username/wordcraft/core/zip"
+
+// Values
+pub fn crc32(Array[Int]) -> UInt
+
+pub fn inflate(Array[Int]) -> Array[Int]?
+
+pub fn read_zip(Bytes) -> Array[ZipEntry]?
+
+pub fn read_zip_text(Bytes) -> Array[(String, String)]?
+
+pub fn write_zip(Array[(String, Bytes)]) -> Bytes
+
+pub fn write_zip_text(Array[(String, String)]) -> Bytes
+
+// Errors
+
+// Types and methods
+type BitReader
+
+type HuffTree
+
+pub struct ZipEntry {
+  name : String
+  data : Array[Int]
+}
+
+// Type aliases
+
+// Traits
