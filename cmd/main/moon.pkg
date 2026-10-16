@@ -1,0 +1,13 @@
+import {
+  "moonbitlang/core/env",
+  "username/wordcraft/core",
+  "username/wordcraft/core/cjk",
+  "username/wordcraft/core/doc",
+  "username/wordcraft/core/docx",
+  "username/wordcraft/core/engine",
+  "username/wordcraft/core/sheet",
+  "username/wordcraft/core/xlsx",
+  "username/wordcraft/core/zip",
+}
+
+pkgtype(kind: "executable")
