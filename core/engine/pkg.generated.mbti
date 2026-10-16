@@ -1,0 +1,22 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "username/wordcraft/core/engine"
+
+import {
+  "username/wordcraft/core",
+  "username/wordcraft/core/doc",
+}
+
+// Values
+pub fn insert_endnote(@doc.Document, Int, String, String) -> Int
+
+pub fn insert_footnote(@doc.Document, Int, String, String) -> Int
+
+pub fn insert_note(@doc.Document, @core.NoteKind, Int, String, String) -> Int
+
+// Errors
+
+// Types and methods
+
+// Type aliases
+
+// Traits

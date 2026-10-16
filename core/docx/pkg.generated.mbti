@@ -1,0 +1,100 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "username/wordcraft/core/docx"
+
+import {
+  "username/wordcraft/core",
+  "username/wordcraft/core/doc",
+}
+
+// Values
+pub fn build_doc_paragraph(String, Array[DocRef]) -> String
+
+pub fn build_note_part(Array[NoteEntry], Bool) -> String
+
+pub fn build_numbering(Array[LevelFmt]) -> String
+
+pub fn build_settings_numfmt(@core.NumFormat, Bool) -> String
+
+pub fn escape_xml(String) -> String
+
+pub fn footnote_separators() -> Array[NoteEntry]
+
+pub fn make_level_fmt(Int, @core.NumFormat) -> LevelFmt
+
+pub fn make_package_doc(@doc.Document, @core.NumFormat, @core.NumFormat, Array[LevelFmt]) -> PackageDoc
+
+pub fn numfmt_from_ooxml(String) -> @core.NumFormat
+
+pub fn numfmt_to_ooxml(@core.NumFormat) -> String
+
+pub fn parse_doc_refs(String) -> Array[DocRef]
+
+pub fn parse_endnotes(String) -> Array[NoteEntry]
+
+pub fn parse_footnotes(String) -> Array[NoteEntry]
+
+pub fn parse_int(String) -> Int?
+
+pub fn parse_numbering(String) -> Array[LevelFmt]
+
+pub fn parse_settings_numfmt(String, Bool) -> @core.NumFormat?
+
+pub fn parse_xml(String) -> XmlNode?
+
+pub fn read_package(Array[(String, String)]) -> PackageDoc?
+
+pub fn write_package(PackageDoc) -> Array[(String, String)]
+
+pub fn write_xml(XmlNode) -> String
+
+// Errors
+
+// Types and methods
+pub struct DocRef {
+  fid : Int
+  kind : @core.NoteKind
+  custom_mark_follows : Bool
+  custom_text : String
+}
+
+type FidMap
+
+pub struct LevelFmt {
+  ilvl : Int
+  num_fmt : @core.NumFormat
+}
+
+pub struct NoteEntry {
+  fid : Int
+  kind : @core.NoteKind
+  note_type : String
+  text : String
+}
+
+pub struct PackageDoc {
+  doc : @doc.Document
+  footnote_fmt : @core.NumFormat
+  endnote_fmt : @core.NumFormat
+  numbering : Array[LevelFmt]
+}
+
+pub struct XmlAttr {
+  name : String
+  value : String
+}
+
+pub struct XmlNode {
+  name : String
+  attrs : Array[XmlAttr]
+  children : Array[XmlNode]
+  text : String
+}
+pub fn XmlNode::attr(Self, String) -> String?
+pub fn XmlNode::child(Self, String) -> Self?
+pub fn XmlNode::children_named(Self, String) -> Array[Self]
+pub fn XmlNode::descendant_texts(Self, String) -> String
+pub fn XmlNode::find_all(Self, String) -> Array[Self]
+
+// Type aliases
+
+// Traits
